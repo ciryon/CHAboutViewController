@@ -1,0 +1,16 @@
+build/*
+objs/*
+Dependencies/*
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+.DS_Store
+test-reports/*
+*.ipa
+xcuserdata
+xcodebuild_output
+Pods
+*.swp
+build.output
+.idea
