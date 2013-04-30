@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ciryon/CHAboutViewController.git", :tag => "0.0.1" }
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
-  s.source_files = 'CHAboutViewController/**/*.{h,m}'
+  s.source_files = 'CHAboutViewController'
+  s.resources    = 'CHAboutViewController/*.xib'
   s.framework  = 'MessageUI'
   s.requires_arc = true
 end
