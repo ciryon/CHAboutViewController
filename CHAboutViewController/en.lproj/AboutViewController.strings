@@ -1,3 +1,5 @@
 key_company = "Company";
 key_support = "Get support";
 key_feedback = "Leave feedback";
+
+about_title = "About";

@@ -15,28 +15,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-
-    CHAboutData *aboutData = [CHAboutData sharedAboutData];
-    aboutData.companyName = @"Test Company Inc.";
-    aboutData.contactMethod = CHAboutDataContactMethodEmail;
-    aboutData.contactMethodValue = @"ciryon@mac.com";
-    aboutData.appInfoURL = [NSURL URLWithString:@"http://www.christian-hedin.com"];
-    aboutData.appSupportURL = [NSURL URLWithString:@"http://wwww.jayway.com"];
-
-    CHAboutViewController *vc = [[CHAboutViewController alloc] initWithAboutData:aboutData];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-    self.window.rootViewController = navController;
-    return YES;
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  // Override point for customization after application launch.
+  self.window.backgroundColor = [UIColor whiteColor];
+  [self.window makeKeyAndVisible];
+  
+  CHAboutData *aboutData = [CHAboutData sharedAboutData];
+  aboutData.companyName = @"Test Company Inc.";
+  aboutData.contactMethod = CHAboutDataContactMethodEmail;
+  aboutData.contactMethodValue = @"ciryon@_no_spam_mac.com";
+  aboutData.appInfoURL = [NSURL URLWithString:@"http://www.test.com"];
+  aboutData.appSupportURL = [NSURL URLWithString:@"http://www.github.com/ciryon/CHAboutViewController"];
+  aboutData.appImage= [UIImage imageNamed:@"test_icon"];
+  aboutData.bannerImage = [UIImage imageNamed:@"test_banner"];
+  CHAboutViewController *vc = [[CHAboutViewController alloc] initWithAboutData:aboutData];
+  UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+  self.window.rootViewController = navController;
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+  // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+  // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

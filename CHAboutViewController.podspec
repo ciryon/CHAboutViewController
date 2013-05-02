@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
   s.source_files = 'CHAboutViewController'
-  s.resources    = 'CHAboutViewController/*.xib'
+  s.resources    = 'CHAboutViewController/*.xib', 'CHAboutViewController/**/*.strings'
   s.framework  = 'MessageUI'
   s.requires_arc = true
+  s.dependency 'TSMiniWebBrowser', '1.0.1'
 end

@@ -16,7 +16,9 @@ typedef enum {
 } CHAboutDataContactMethod;
 
 @interface CHAboutData : NSObject
-
+{
+  UIImage *_appImage;
+}
 +(CHAboutData *)sharedAboutData;
 
 
@@ -26,7 +28,12 @@ typedef enum {
 @property (nonatomic, strong) NSString *companyName;
 @property (nonatomic, strong) NSURL    *appInfoURL;
 @property (nonatomic, strong) NSURL    *appSupportURL;
+
+/* 64x64 pixels. If not set, default will be best guess raw app icon */
 @property (nonatomic, strong) UIImage    *appImage;
+
+/* 320x154 pixels (iPhone portrait) No default image. */
+@property (nonatomic, strong) UIImage *bannerImage;
 
 @property (nonatomic, assign) CHAboutDataContactMethod contactMethod;
 @property (nonatomic, assign) id contactMethodValue;

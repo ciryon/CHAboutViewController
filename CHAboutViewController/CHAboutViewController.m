@@ -10,6 +10,7 @@
 #import "CHAboutViewCell.h"
 #import "CHAboutData.h"
 #import <MessageUI/MFMailComposeViewController.h>
+#import "TSMiniWebBrowser.h"
 
 typedef enum {
     CHAboutViewRowCompany,
@@ -23,8 +24,7 @@ typedef enum {
 @interface CHAboutViewController () <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property(strong, nonatomic) IBOutlet UIImageView *iconImageView;
-@property(strong, nonatomic) IBOutlet UILabel *appNameLabel;
-@property(strong, nonatomic) IBOutlet UILabel *appVersionsLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *bannerImageView;
 @property(strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property(strong, nonatomic) CHAboutData *aboutData;
@@ -48,10 +48,41 @@ typedef enum {
 {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"CHAboutViewCell" bundle:nil] forCellReuseIdentifier:kCHAboutViewCellIdentifier];
-    self.appNameLabel.text = self.aboutData.appName;
-    self.appVersionsLabel.text = [NSString stringWithFormat:@"Version %@ (%@)", self.aboutData.appMarketingVersion, self.aboutData.appDetailedVersion];
+
+  [self loadTextStrings];
+  [self loadImages];
+  
+  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapDoneButton:)];
+    self.navigationItem.leftBarButtonItem = doneButton;
 }
 
+-(void)loadTextStrings;
+{
+    self.navigationItem.title = NSLocalizedStringFromTable(@"about_title", @"AboutViewController",nil);
+    self.appNameLabel.text = self.aboutData.appName;
+  self.appVersionsLabel.text = [NSString stringWithFormat:@"Version %@ (%@)", self.aboutData.appMarketingVersion, self.aboutData.appDetailedVersion];
+}
+
+
+-(void)loadImages;
+{
+  if (self.aboutData.appImage) {
+    self.iconImageView.image = self.aboutData.appImage;
+
+  }
+  if (self.aboutData.bannerImage) {
+    self.bannerImageView.image = self.aboutData.bannerImage;
+    
+  }
+}
+
+-(void)didTapDoneButton:(id)sender;
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:^{
+
+                             }];
+}
 #pragma UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -64,15 +95,15 @@ typedef enum {
     CHAboutViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCHAboutViewCellIdentifier forIndexPath:indexPath];
     switch (indexPath.row) {
         case CHAboutViewRowCompany:
-            cell.keyLabel.text = NSLocalizedString(@"key_company", nil);
+            cell.keyLabel.text = NSLocalizedStringFromTable(@"key_company", @"AboutViewController",nil);
             cell.valueLabel.text = self.aboutData.companyName;
             break;
         case CHAboutViewRowSupport:
-            cell.keyLabel.text = NSLocalizedString(@"key_support", nil);
+            cell.keyLabel.text = NSLocalizedStringFromTable(@"key_support",@"AboutViewController", nil);
             cell.valueLabel.text = nil;
             break;
         case CHAboutViewRowContact:
-            cell.keyLabel.text = NSLocalizedString(@"key_feedback", nil);
+            cell.keyLabel.text = NSLocalizedStringFromTable(@"key_feedback", @"AboutViewController",nil);
             cell.valueLabel.text = nil;
             break;
         default:
@@ -88,20 +119,22 @@ typedef enum {
     switch (indexPath.row) {
         case CHAboutViewRowCompany:
             if (self.aboutData.appInfoURL) {
-                [[UIApplication sharedApplication] openURL:self.aboutData.appInfoURL];
+              UIViewController *browser = [[TSMiniWebBrowser alloc] initWithUrl:self.aboutData.appInfoURL];
+              [self.navigationController pushViewController:browser animated:YES];
             }
             break;
         case CHAboutViewRowSupport:
             if (self.aboutData.appSupportURL) {
-                [[UIApplication sharedApplication] openURL:self.aboutData.appSupportURL];
+              UIViewController *browser = [[TSMiniWebBrowser alloc] initWithUrl:self.aboutData.appSupportURL];
+              [self.navigationController pushViewController:browser animated:YES];
             }
             break;
         case CHAboutViewRowContact:
             if (self.aboutData.contactMethod == CHAboutDataContactMethodEmail) {
                 [self sendFeedBackMail];
             }
-            else if (self.aboutData.contactMethod == CHAboutDataContactMethodEmail) {
-
+            else if (self.aboutData.contactMethod == CHAboutDataContactMethodWebPage) {
+              // TODO: Implement feedback via web
             }
             break;
     }
@@ -113,7 +146,7 @@ typedef enum {
         MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
 
         mail.mailComposeDelegate = self;
-        [mail setSubject:[NSString stringWithFormat:@"Feedback from %@ %@ (%@)", self.aboutData.appName, self.aboutData.appMarketingVersion, self.aboutData.appDetailedVersion]];
+        [mail setSubject:[NSString stringWithFormat:@"%@ %@ (%@)", self.aboutData.appName, self.aboutData.appMarketingVersion, self.aboutData.appDetailedVersion]];
 
         NSArray *recipient = [NSArray arrayWithObjects:self.aboutData.contactMethodValue, nil];
         [mail setToRecipients:recipient];

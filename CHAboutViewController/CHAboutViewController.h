@@ -14,4 +14,9 @@
 
 - (id)initWithAboutData:(CHAboutData*)aboutData;
 
+
+/* For customization of font, colors, etc */
+@property(strong, nonatomic) IBOutlet UILabel *appNameLabel;
+@property(strong, nonatomic) IBOutlet UILabel *appVersionsLabel;
+
 @end

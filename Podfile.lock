@@ -1,0 +1,11 @@
+
+PODS:
+- TSMiniWebBrowser (1.0.1)
+
+DEPENDENCIES:
+- TSMiniWebBrowser
+
+SPEC CHECKSUMS:
+  TSMiniWebBrowser: b0d1e578f250f29615541093564df0c2aebcda07
+
+COCOAPODS: 0.16.3

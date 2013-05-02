@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEED003EE2DAD4120309F830 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEED0F141F7C340229575D7A /* Localizable.strings */; };
+		80F3EB51DDAE49FCB1D94B3F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C299E2BCE52240D8B92B3C97 /* libPods.a */; };
 		AEED073DCB39802811E67CD5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED027BCF3401E5DA2CC4FF /* MessageUI.framework */; };
 		B12EC5C3172EE422005AF35E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12EC5C2172EE421005AF35E /* UIKit.framework */; };
 		B12EC5C5172EE422005AF35E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12EC5C4172EE422005AF35E /* Foundation.framework */; };
@@ -23,21 +23,26 @@
 		B12EC5E9172EE488005AF35E /* CHAboutData.m in Sources */ = {isa = PBXBuildFile; fileRef = B12EC5E8172EE488005AF35E /* CHAboutData.m */; };
 		B12EC5EC172F0184005AF35E /* CHAboutViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B12EC5EB172F0184005AF35E /* CHAboutViewCell.m */; };
 		B12EC5EE172F0192005AF35E /* CHAboutViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12EC5ED172F0192005AF35E /* CHAboutViewCell.xib */; };
+		B1DD97071735874F00E53290 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DD97061735874F00E53290 /* app_icon.png */; };
+		B1DD970917358FE000E53290 /* test_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DD970817358FE000E53290 /* test_icon.png */; };
+		B1DD970C1735943400E53290 /* test_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DD970A1735943400E53290 /* test_banner.png */; };
+		B1DD970D1735943400E53290 /* test_banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DD970B1735943400E53290 /* test_banner@2x.png */; };
+		B1DD970E1735996A00E53290 /* AboutViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1DD97101735996A00E53290 /* AboutViewController.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870C70E2C9C24015A2B52793 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		AEED027BCF3401E5DA2CC4FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		AEED0F141F7C340229575D7A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B12EC5BF172EE421005AF35E /* CHAboutViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHAboutViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12EC5C2172EE421005AF35E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B12EC5C4172EE422005AF35E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B12EC5C6172EE422005AF35E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B12EC5CA172EE422005AF35E /* CHAboutViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHAboutViewController-Info.plist"; sourceTree = "<group>"; };
 		B12EC5CC172EE422005AF35E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B12EC5CE172EE422005AF35E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B12EC5CE172EE422005AF35E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../DemoApp/main.m; sourceTree = "<group>"; };
 		B12EC5D0172EE422005AF35E /* CHAboutViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHAboutViewController-Prefix.pch"; sourceTree = "<group>"; };
-		B12EC5D1172EE422005AF35E /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
-		B12EC5D2172EE422005AF35E /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		B12EC5D1172EE422005AF35E /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CHAppDelegate.h; path = ../DemoApp/CHAppDelegate.h; sourceTree = "<group>"; };
+		B12EC5D2172EE422005AF35E /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CHAppDelegate.m; path = ../DemoApp/CHAppDelegate.m; sourceTree = "<group>"; };
 		B12EC5D4172EE422005AF35E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B12EC5D6172EE422005AF35E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B12EC5D8172EE422005AF35E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -49,6 +54,16 @@
 		B12EC5EA172F0184005AF35E /* CHAboutViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAboutViewCell.h; sourceTree = "<group>"; };
 		B12EC5EB172F0184005AF35E /* CHAboutViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAboutViewCell.m; sourceTree = "<group>"; };
 		B12EC5ED172F0192005AF35E /* CHAboutViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHAboutViewCell.xib; sourceTree = "<group>"; };
+		B1DD97061735874F00E53290 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		B1DD970817358FE000E53290 /* test_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_icon.png; path = DemoApp/test_icon.png; sourceTree = SOURCE_ROOT; };
+		B1DD970A1735943400E53290 /* test_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_banner.png; path = DemoApp/test_banner.png; sourceTree = SOURCE_ROOT; };
+		B1DD970B1735943400E53290 /* test_banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "test_banner@2x.png"; path = "DemoApp/test_banner@2x.png"; sourceTree = SOURCE_ROOT; };
+		B1DD970F1735996A00E53290 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AboutViewController.strings; sourceTree = "<group>"; };
+		B1DD9711173599AC00E53290 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file; name = sv; path = sv.lproj/AboutViewController.strings; sourceTree = "<group>"; };
+		B1DD9712173599AC00E53290 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1DD9713173599B300E53290 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/AboutViewController.strings; sourceTree = "<group>"; };
+		B1DD9714173599B300E53290 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C299E2BCE52240D8B92B3C97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,7 @@
 				B12EC5C5172EE422005AF35E /* Foundation.framework in Frameworks */,
 				B12EC5C7172EE422005AF35E /* CoreGraphics.framework in Frameworks */,
 				AEED073DCB39802811E67CD5 /* MessageUI.framework in Frameworks */,
+				80F3EB51DDAE49FCB1D94B3F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +85,11 @@
 		B12EC5B6172EE421005AF35E = {
 			isa = PBXGroup;
 			children = (
+				B1DD97061735874F00E53290 /* app_icon.png */,
 				B12EC5C8172EE422005AF35E /* CHAboutViewController */,
 				B12EC5C1172EE421005AF35E /* Frameworks */,
 				B12EC5C0172EE421005AF35E /* Products */,
+				870C70E2C9C24015A2B52793 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +108,7 @@
 				B12EC5C4172EE422005AF35E /* Foundation.framework */,
 				B12EC5C6172EE422005AF35E /* CoreGraphics.framework */,
 				AEED027BCF3401E5DA2CC4FF /* MessageUI.framework */,
+				C299E2BCE52240D8B92B3C97 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +129,7 @@
 		B12EC5C9172EE422005AF35E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1DD97101735996A00E53290 /* AboutViewController.strings */,
 				B12EC5CA172EE422005AF35E /* CHAboutViewController-Info.plist */,
 				B12EC5CB172EE422005AF35E /* InfoPlist.strings */,
 				B12EC5CE172EE422005AF35E /* main.m */,
@@ -117,7 +137,6 @@
 				B12EC5D4172EE422005AF35E /* Default.png */,
 				B12EC5D6172EE422005AF35E /* Default@2x.png */,
 				B12EC5D8172EE422005AF35E /* Default-568h@2x.png */,
-				AEED0F141F7C340229575D7A /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -134,6 +153,9 @@
 		B12EC5E0172EE43C005AF35E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B1DD970A1735943400E53290 /* test_banner.png */,
+				B1DD970B1735943400E53290 /* test_banner@2x.png */,
+				B1DD970817358FE000E53290 /* test_icon.png */,
 				B12EC5E4172EE466005AF35E /* CHAboutViewController.xib */,
 				B12EC5EA172F0184005AF35E /* CHAboutViewCell.h */,
 				B12EC5EB172F0184005AF35E /* CHAboutViewCell.m */,
@@ -161,6 +183,7 @@
 				B12EC5BB172EE421005AF35E /* Sources */,
 				B12EC5BC172EE421005AF35E /* Frameworks */,
 				B12EC5BD172EE421005AF35E /* Resources */,
+				9125785F3C144F8182649767 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +210,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				sv,
+				de,
 			);
 			mainGroup = B12EC5B6172EE421005AF35E;
 			productRefGroup = B12EC5C0172EE421005AF35E /* Products */;
@@ -209,11 +234,32 @@
 				B12EC5D9172EE422005AF35E /* Default-568h@2x.png in Resources */,
 				B12EC5E6172EE466005AF35E /* CHAboutViewController.xib in Resources */,
 				B12EC5EE172F0192005AF35E /* CHAboutViewCell.xib in Resources */,
-				AEED003EE2DAD4120309F830 /* Localizable.strings in Resources */,
+				B1DD970E1735996A00E53290 /* AboutViewController.strings in Resources */,
+				B1DD97071735874F00E53290 /* app_icon.png in Resources */,
+				B1DD970917358FE000E53290 /* test_icon.png in Resources */,
+				B1DD970C1735943400E53290 /* test_banner.png in Resources */,
+				B1DD970D1735943400E53290 /* test_banner@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9125785F3C144F8182649767 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B12EC5BB172EE421005AF35E /* Sources */ = {
@@ -235,8 +281,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				B12EC5CC172EE422005AF35E /* en */,
+				B1DD9712173599AC00E53290 /* sv */,
+				B1DD9714173599B300E53290 /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B1DD97101735996A00E53290 /* AboutViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1DD970F1735996A00E53290 /* en */,
+				B1DD9711173599AC00E53290 /* sv */,
+				B1DD9713173599B300E53290 /* de */,
+			);
+			name = AboutViewController.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -302,6 +360,7 @@
 		};
 		B12EC5DD172EE422005AF35E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870C70E2C9C24015A2B52793 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHAboutViewController/CHAboutViewController-Prefix.pch";
@@ -313,6 +372,7 @@
 		};
 		B12EC5DE172EE422005AF35E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870C70E2C9C24015A2B52793 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CHAboutViewController/CHAboutViewController-Prefix.pch";
@@ -341,6 +401,7 @@
 				B12EC5DE172EE422005AF35E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

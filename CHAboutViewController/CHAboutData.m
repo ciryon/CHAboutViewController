@@ -10,6 +10,8 @@
 
 @implementation CHAboutData
 
+@synthesize appImage = _appImage;
+
 +(CHAboutData *)sharedAboutData;
 {
   static dispatch_once_t pred;
@@ -48,9 +50,25 @@
     return infoDict;
 }
 
+
 -(UIImage*)appImage;
 {
+  if (_appImage) {
+    return _appImage;
+  }
+  else {
+    return [self iconImageFromPlist];
+  }
+}
 
+-(UIImage*)iconImageFromPlist;
+{
+  NSDictionary *icons = [[self infoDict] objectForKey:@"CFBundleIcons"];
+  NSDictionary *primaryIcon = [icons objectForKey:@"CFBundlePrimaryIcon"];
+  NSArray *iconFiles = [primaryIcon objectForKey:@"CFBundleIconFiles"];
+  NSString *iconFile = [iconFiles objectAtIndex:0];
+  UIImage *image = [UIImage imageNamed:iconFile];
+  return image;
 }
 
 @end
